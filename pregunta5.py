@@ -37,34 +37,41 @@ def prim(grafo, inicio):
     return previos
 
 # Apartado a
+print("\n")
+print("\nApartado a:")
 inicio = personajes.index('Iron Man')
 previos = prim(grafo, inicio)
 print("Árbol de expansión máximo desde Iron Man:")
 for i, p in enumerate(previos):
     if p is not None:
-        print("Apartado a:")
         print(f'{personajes[p]} -- {personajes[i]}')
 
 # Apartado b
+print("\n")
+print("\nApartado b:")
 max_episodios = np.max(grafo)
 print(f'\nMáximo número de episodios compartidos: {max_episodios}')
 print('Pares de personajes que comparten el máximo número de episodios:')
 indices = np.where(grafo == max_episodios)
 for i in range(len(indices[0])):
     if indices[0][i] < indices[1][i]:
-        print("Apartado b:")
         print(f'{personajes[indices[0][i]]} -- {personajes[indices[1][i]]}')
 
 # Apartado c
+print("\n")
+print("\nApartado c:")
 print('\nTodos los personajes:')
 for personaje in personajes:
-    print("Apartado c:")
     print(personaje)
 
 # Apartado d
+print("\n")
+print("\nApartado d:")
 print('\nPersonajes que aparecieron en nueve episodios de la saga:')
 indices_nueve_episodios = np.where(grafo == 9)
 for i in range(len(indices_nueve_episodios[0])):
     if indices_nueve_episodios[0][i] < indices_nueve_episodios[1][i]:
-        print("Apartado a:")
         print(f'{personajes[indices_nueve_episodios[0][i]]} -- {personajes[indices_nueve_episodios[1][i]]}')
+
+
+print("\n")

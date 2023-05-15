@@ -47,8 +47,14 @@ has_path_social = nx.has_path(twitter_graph, 'The Winter Soldier', 'Iron Man') o
 # Apartado f
 thor_follows = [n for n in instagram_graph.neighbors('Thor')]
 
+print("\n")
 print(f"Árbol de expansión máximo para Twitter: {max_tree_twitter.edges(data=True)}")
+print("\n")
 print(f"Árbol de expansión máximo para Instagram: {max_tree_instagram.edges(data=True)}")
+print("\n")
 print(f"¿Es posible conectar a Captain America con Nick Fury en Twitter?: {'Sí' if has_path_twitter else 'No'}")
+print("\n")
 print(f"¿Es posible conectar a The Winter Soldier con Iron Man en alguna red social?: {'Sí' if has_path_social else 'No'}")
+print("\n")
 print(f"Thor sigue a las siguientes personas en Instagram: {thor_follows}")
+print("\n")
